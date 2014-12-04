@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+
+ <link rel="icon" type="image/vnd.microsoft.icon" href="conemu.ico">
+
+ <link rel="canonical" href="http://www.conemu.ru" />
+
+ <link rel="stylesheet" href="main.css">
+
+ <title>Настройка ConEmu</title>
+ 
+</head>
+
+<body>
+
+<div class="wrapper">
+<div class="maincol" id="wikimaincol">
+
+<h1>Настройка ConEmu</h1>
+
+<p>Если по прочтении нижеизложенного материала вопросы остаются - <a href="http://code.google.com/p/conemu-maximus5/issues/list">задавайте</a>.
+</p>
+
+<p>Про настройку ConEmu хочется сказать следующее</p>
+<p></p><ul>
+<li>ConEmu работает так, как хочется пользователю (то есть вам),</li>
+<li>Если это не так, значит в диалоге настроек есть флажок, который вы не включили ;)</li>
+<li>Конечно, может так случиться, что нужная вам опция еще никому не понадобилась, тогда вам <a href="http://code.google.com/p/conemu-maximus5/issues/list">сюда</a></li>
+</ul><p></p>
+
+<p>Итак, при <b>первом</b> запуске программы вы, скорее всего, увидите диалог <b>быстрой</b> настройки:
+</p>
+
+<p><img src="./img/PreConfig.png"></p>
+
+<p>Вы можете выбрать, что будете разрешать ConEmu, т.к. на некоторые функции
+(перехват клавиатуры, внедрение в процессы, доступ к интернету)
+могут ругаться антивирусные программы. <b>ConEmu не содержит троянов или вирусов</b>, код открыт, можете 
+<a href="http://code.google.com/p/conemu-maximus5/source/checkout">проверить</a>. Тем не менее, вы можете
+отключить эти функции, хотя это и не рекомендуется.
+</p>
+
+<p><b>Install keyboard hooks</b>. Если флажок отключить, ConEmu не сможет обрабатывать некоторые
+клавиатурные комбинации. Например, в Windows 7 комбинации Win+<i>цифра</i> (Win+1, Win+2, т.д.)
+переключают/запускают программы на панели задач. А ведь ими удобно переключать табы в окне ConEmu.
+Включение флажка «Install keyboard hooks» означает не то, что ConEmu будет блокировать системные
+клавиатурные комбинации, а только то, что у вас есть возможность включить или отключить их перехват
+в диалоге настроек. Например, флажками «Host-key+Number», «Disable Win+Tab» и т.п. (вкладка «Keys»
+диалога настроек).
+</p>
+
+<p><b>Inject ConEmuHk.dll into processes, started in ConEmu tabs</b>. Для многих возможностей
+(обработку параметра "-new_console", работу графических приложений во вкладках ConEmu, ...)
+и избежания проблем (например, появление графических диалогов или меню под окном ConEmu, ...)
+требуется внедрение в запускаемые процессы библиотеки ConEmuHk.dll
+(или ConEmuHk64.dll для 64-битных приложений).
+</p>
+
+<p><b>Enable automatic updates</b>. Все очевидно, разрешить обновление программы из интернета.
+Потом, в диалоге настроек на вкладке «Update» можно будет настроить параметры обновления.
+ConEmu не «самовольничает», перед запуском процесса обновления у вас спросят подтверждение.
+</p>
+<p>На момент написания этого текста еще нет «Stable» сборок ConEmu, в которых есть опция
+автоматического обновления. Поэтому пока, с точки зрения обновления, нет разницы между
+«Stable builds» и «Developer builds».
+</p>
+
+<p><b>После нажатия кнопки «OK»</b>, ConEmu запускает в своей вкладке либо Far Manager (если найден),
+либо cmd.exe, либо ту программу (или программы), которые указаны в свойствах ярлыка
+или в настройке ConEmu.
+</p>
+
+<h3>Теперь можно открыть диалог настроек</h3>
+<p></p><ul><li>выбрав пункт «Settings...» из меню ConEmu (открыть меню можно щелкнув правой кнопкой мышки
+по заголовку окна или левой кнопкой мышки по иконке в заголовке окна, или нажав на клавиатуре Win+Alt+Space)</li>
+<li>или просто нажать на клавиатуре Win+Alt+P</li></ul>
+<p></p>
+
+<h3>Ссылки на документацию</h3>
+<p></p><ul>
+<li><a href="http://code.google.com/p/conemu-maximus5/wiki/Command_Line">Параметры командной строки, запуск при старте нескольких вкладок</a></li>
+<li><a href="http://code.google.com/p/conemu-maximus5/wiki/Settings">Описание настройки (на английском)</a></li>
+<li><a href="http://code.google.com/p/conemu-maximus5/wiki/ConEmuFAQ?wl=ru">ЧаВо (на русском)</a></li>
+<li><a href="http://code.google.com/p/conemu-maximus5/wiki/TableOfContents">Остальная документация</a></li>
+</ul>
+<p></p>
+
+<!--
+<table width="850" border="0" cellspacing="0" cellpadding="0" style="font-size: 10pt;">
+<tbody><tr><td><h3 style="margin-bottom: 0"><a name="Screenshots">Диалог настроек ConEmu</a></h3></td></tr><tr>
+</tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Наведите курсор на элемент диалога для просмотра его описания</td></tr>
+<tr><td><img src="./settings_files/ConEmu_SetMain.png" alt="ConEmu Settings, Main page" usemap="#SettingsMain">
+    <map name="SettingsMain">
+    	<area shape="rect" coords="30,50,131,425" title="Settings, Main page">
+        <area shape="rect" coords="139,56,349,173" title="Настройка основного шрифта">
+        <area shape="rect" coords="139,175,349,199" title="Зарезервировав несколько цветов фона консоли можно менять начертание шрифта. Например, если в консоли текст отображен на фиолетовом фоне (13) в ConEmu он может быть показан курсивом, а цвет фона заменен на указанный пользователем (15 - белый).">
+        <area shape="rect" coords="139,200,349,249" title="Шрифт, которым отрисовываются рамки. Может быть полезно, если рамки в основном шрифте отсутствую или не нравится их начертание. При отключении флажка «Fix Far borders» рамки будут отрисовываться основным шрифтом.">
+        <area shape="rect" coords="353,57,624,91" title="Можно выбрать вид текстового курсора: вертикальный (как в обычных GUI приложениях) или горизонтальный (как в консоли Windows)">
+        <area shape="rect" coords="353,92,414,116" title="При включенном флажке «Color» курсор отрисовывается инверсией цветов в консоли, при выключенном - курсор будет черным или белым">
+        <area shape="rect" coords="415,92,478,116" title="Можно включить или отключить мигание курсора">
+        <area shape="rect" coords="479,92,624,116" title="Чтобы «на взгляд» было видно, в фокусе ли ConEmu - при потере фокуса вместо курсора может быть отрисован прямоугольник">
+        <area shape="rect" coords="353,117,624,154" title="Режим сглаживания шрифтов, выбирайте «по вкусу». Рамки (при включенном «Fix Far borders») отрисовываются без сглаживания.">
+        <area shape="rect" coords="353,155,624,231" title="Координаты и размер окна ConEmu">
+        <area shape="rect" coords="353,232,624,253" title="Координаты и размер можно автоматически сохранять при закрытии ConEmu">
+        <area shape="rect" coords="139,258,624,304" title="Вместо скучного фона консоли можно выбрать картинку по вкусу">
+        <area shape="rect" coords="139,305,624,332" title="А если картинка слишком яркая и на ней не видно текста - картинку можно затемнить">
+        <area shape="rect" coords="139,333,335,370" title="Чтобы ConEmu знал какие фоновые цвета консоли можно заменять на фоновую картинку - задайте индексы цветов, или поставьте звездочку (*) для автовыбора">
+        <area shape="rect" coords="336,333,442,370" title="Фон может быть задан не только статической картинкой, но и плагинами в Far Manager (ConEmu Background, ConEmu Underlines). Флажок «Allow plugins» разрешает или запрещает отображения фона из плагинов.">
+        <area shape="rect" coords="443,333,624,370" title="Для статической картинки (из файла) можно выбрать режим отрисовки: верхний-левый угол, растянуть, плитка">
+        <area shape="rect" coords="139,375,624,425" title="Можно указать приложение и его параметры, которое запускается при старте ConEmu">
+        <area shape="rect" coords="518,437,626,461" title="Все настройки применяются «на лету» для текущего сеанса ConEmu, а для сохранения из в реестр/xml-файл нажмите кнопку «Save settings»">
+        <area shape="rect" coords="0,0,518,473" title="">
+    </map>
+</td></tr>
+<tr><td><img src="./settings_files/ConEmu_SetFeatures.png" alt="ConEmu Settings, Features page" usemap="#SettingsFeatures">
+    <map name="SettingsFeatures">
+    	<area shape="rect" coords="30,50,131,425" title="Settings, Features page">
+    </map>
+</td></tr>
+<tr><td><img src="./settings_files/ConEmu_SetKeys.png" alt="ConEmu Settings, Keys page" usemap="#SettingsKeys">
+    <map name="SettingsKeys">
+    	<area shape="rect" coords="30,50,131,425" title="Settings, Keys page">
+    </map>
+</td></tr>
+<tr><td><img src="./settings_files/ConEmu_SetTabs.png" alt="ConEmu Settings, Tabs page" usemap="#SettingsTabs">
+    <map name="SettingsTabs">
+    	<area shape="rect" coords="30,50,131,425" title="Settings, Tabs page">
+    </map>
+</td></tr>
+<tr><td><img src="./settings_files/ConEmu_SetColors.png" alt="ConEmu Settings, Colors page" usemap="#SettingsColors">
+    <map name="SettingsColors">
+    	<area shape="rect" coords="30,50,131,425" title="Settings, Colors page">
+    </map>
+</td></tr>
+<tr><td><img src="./settings_files/ConEmu_SetViews.png" alt="ConEmu Settings, Views page" usemap="#SettingsViews">
+    <map name="SettingsViews">
+    	<area shape="rect" coords="30,50,131,425" title="Settings, Views page">
+    </map>
+</td></tr>
+<tr><td><img src="./settings_files/ConEmu_SetInfo.png" alt="ConEmu Settings, Info page" usemap="#SettingsInfo">
+    <map name="SettingsInfo">
+    	<area shape="rect" coords="30,50,131,425" title="Settings, Info page">
+    </map>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+
+</tbody></table>
+-->
+
+			<h3>Скачать (Download)</h3>
+
+			<p>Последнюю версию ConEmu-Maximus5 можно скачать <a href="http://www.fosshub.com/ConEmu.html">здесь</a>.</p>
+
+			<p>Документация на английском <a href="http://code.google.com/p/conemu-maximus5/wiki/ConEmu">здесь</a>.</p>
+
+ </div>
+ </div>
+
+ </body>
+</html>
