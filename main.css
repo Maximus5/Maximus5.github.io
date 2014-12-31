@@ -102,3 +102,11 @@ h1, h2 {
   box-shadow: 0 0 8px 3px #93a1a1;
   padding: .5em;
 }
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
