@@ -68,6 +68,12 @@ code {
   line-height: 1.5em;
   overflow: auto;
   padding: .7em;
+  white-space: pre;
+}
+
+code.install {
+  width: 50em;
+  white-space: normal;
 }
 
 img {
