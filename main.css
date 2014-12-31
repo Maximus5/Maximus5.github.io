@@ -10,9 +10,11 @@ body {
   font-family: "Segoe UI", "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
   background: #073642;
   color: #002b36;
+  font-size: 100%;
 }
 
 div {
+  font-size: 100%;
   display: block;
 }
 
@@ -47,8 +49,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: .6em 0;
 }
 
+h1.intro {
+  margin: 0;
+}
+
 code {
-  width: 600px;
+  width: 60em;
   font: .8em 'andale mono', 'lucida console', monospace;
   line-height: 1.462em;
   background-color: #002b36;
