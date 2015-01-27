@@ -183,6 +183,7 @@ table, th, td {
   background: url('./img/tw.png');
 }
 #soc-plus {
+  background: #fdf6e3;
   display: block;
   /*width: 32px;*/
   height: 32px;
@@ -199,8 +200,13 @@ table, th, td {
   -webkit-background-size: auto;*/
   background-attachment: scroll;
   background-clip: border-box;
+  /*
+  background-color: #fdf6e3;
+  border-left: 1px solid #93a1a1;
+  border-right: 1px solid #93a1a1;
+  */
   /*background-color: rgba(0, 0, 0, 0);*/
-  background-image: url('./img/22.gif') ;
+  background-image: url('./img/22.gif');
   background-repeat: repeat-y;
   background-origin: padding-box;
   background-size: auto;
@@ -223,6 +229,7 @@ table, th, td {
   -webkit-background-size: auto;
   background-attachment: scroll;
   background-clip: border-box;
+  /*background-color: #fdf6e3;*/
   /*background-color: rgba(0, 0, 0, 0);*/
   background-image: url('./img/23.gif');
   background-repeat: no-repeat;
@@ -296,13 +303,15 @@ table, th, td {
 .blockcontent li {
   list-style: none;
   margin: 0;
-  background: #e0e0e0 url('./img/25.gif') repeat-x;
-  border-bottom: 1px solid #cecece;
+  background: #eee8d5 url('./img/25.gif') repeat-x;
+  border-bottom: 1px solid #839496;
   line-height: 14px !important;
 }
 .blockcontent li a {
   font: 12px/12px 'Tahoma';
+  /*
   color: #6e6e6e;
+  */
   margin: 0;
   display: block;
   padding: 9px 0px;
@@ -311,7 +320,9 @@ table, th, td {
   text-decoration: none !important;
 }
 .blockcontent li a:hover, .blockcontent .MenuItemA {
+  /*
   color: #6196da;
+  */
   text-decoration: none !important;
 }
 .blockcontent li a span {
