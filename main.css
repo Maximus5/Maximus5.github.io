@@ -49,7 +49,7 @@ h1.intro {
 }
 
 code {
-  width: 60em;
+  width: 95%;
   font: .8em 'andale mono', 'lucida console', monospace;
   line-height: 1.462em;
   background-color: #002b36;
@@ -124,7 +124,7 @@ table, th, td {
   overflow: hidden;
 }
 .content {
-  padding: 0 0 0 270px;
+  padding: 0 0 0 210px;
 }
 
 
