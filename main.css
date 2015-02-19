@@ -1,9 +1,9 @@
 ﻿
 .site {
-  margin: 0 auto;
-  max-width: 960px;
-  /*max-width: 68.571428571rem;*/
-  overflow: hidden;
+margin: 0 auto;
+max-width: 960px;
+/*max-width: 68.571428571rem;*/
+overflow: hidden;
 }
 
 body {
@@ -84,7 +84,7 @@ h1, h2 {
   margin-top: 0;
 }
 
-.text.Yinfo {
+.text.stext {
   max-width: 450px;
   font-size: .8em;
 }
@@ -102,9 +102,12 @@ table {
   border-collapse: collapse;
 }
 
+/*
+-- мешает на главной, переделать на div-ы
 table, th, td {
   border: 1px solid black;
 }
+*/
 
 /* Middle
 -----------------------------------------------------------------------------*/
@@ -148,19 +151,6 @@ table, th, td {
   color: #fdf6e3;
 }
 
-/* Header
------------------------------------------------------------------------------*/
-.header {
-  height: 68px;
-}
-#header-line {
-  background: #002b36;
-  width: 100%;
-  height: 1px;
-  float: left;
-  margin-top: 10px;
-}
-
 /* Social
 -----------------------------------------------------------------------------*/
 #social {
@@ -185,8 +175,8 @@ table, th, td {
 #soc-plus {
   background: #fdf6e3;
   display: block;
-  /*width: 32px;*/
-  height: 32px;
+  width: 124px;
+  height: 26px;
   float: left;
   margin: 10px 6px 0px 0px;
 }
@@ -301,37 +291,66 @@ table, th, td {
   list-style: none;
 }
 .blockcontent li {
+  line-height: 1.5em !important;
+}
+.blockcontent .MenuItemA {
+  text-decoration: none !important;
+}
+/*
+.blockcontent li {
   list-style: none;
   margin: 0;
   background: #eee8d5 url('./img/25.gif') repeat-x;
   border-bottom: 1px solid #839496;
   line-height: 14px !important;
 }
+*/
+/*
 .blockcontent li a {
   font: 12px/12px 'Tahoma';
-  /*
-  color: #6e6e6e;
-  */
   margin: 0;
   display: block;
   padding: 9px 0px;
 }
-.blockcontent a {
-  text-decoration: none !important;
-}
+*/
+/*
 .blockcontent li a:hover, .blockcontent .MenuItemA {
-  /*
   color: #6196da;
-  */
   text-decoration: none !important;
 }
-.blockcontent li a span {
-  background: url('./img/26.png') 0px 2px no-repeat;
+*/
+/*
+.blockcontent li span {
   padding: 0px 0px 2px 20px;
   margin-left: 10px;
 }
+*/
+/*
+.blockcontent a {
+  text-decoration: none !important;
+  background: url('./img/26.png') 8px 9px no-repeat;
+  padding: 0px 0px 2px 20px;
+  margin-left: 10px;
+}
+*/
+/*
+.blockcontent .MenuItemA {
+  background: url('./img/27.png') 8px 9px no-repeat;
+}
+*/
 
-
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+  height: 90px;
+}
+#header-line {
+  background: #002b36;
+  width: 100%;
+  height: 1px;
+  float: left;
+  margin-top: 10px;
+}
 /* Logo
 -----------------------------------------------------------------------------*/
 #logo-block {
@@ -339,7 +358,7 @@ table, th, td {
   margin: 0;
   background: url('./img/logo.png') no-repeat;
   width: 270px;
-  height: 48px;
+  height: 90px;
 }
 #logo-block h1 {
   margin: 0px 0px 0px 55px;
