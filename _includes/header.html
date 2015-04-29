@@ -1,0 +1,27 @@
+{% comment %} ‘UTF-8’ {% endcomment %}
+<div class="header">
+<header>
+  <div class="header-left">
+    <div class="h-logo"><a href="{% if site.url != 'local' %}{{ site.url }}{% endif %}/"><img src="/img/logo.png" alt="ConEmu-Maximus5 logo"></a></div>
+    <div class="h-title-desc">
+      <div class="h-title"><a href="{% if site.url != 'local' %}{{ site.url }}{% endif %}/">ConEmu</a></div>
+      <div class="h-desc">{% if site.url != 'local' %}<a href="{% if site.url != 'local' %}{{ site.url }}{% endif %}/">{{ page.site_label }}</a>{% else %}<span id="media-width"></span><span id="media-orient"></span>{% endif %}</div>
+    </div>
+    <div class="h-social">
+      <a class="h-twitter" target="_blank"
+        href="https://twitter.com/intent/tweet?text={{ site.twit_text }}&url=http%3A%2F%2F{{ site.site_name }}"
+        title="Share ConEmu on Twitter"></a>
+      <a class="h-facebook" target="_blank"
+        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F{{ site.site_name }}"
+        title="Share ConEmu on FaceBook"></a>
+      <a class="h-gplus" target="_blank"
+        href="https://plus.google.com/share?url=http%3A%2F%2F{{ site.site_name }}"
+        title="Share ConEmu on Google+"></a>
+    </div>
+  </div>
+  <div id="header-google">
+{% if site.url != 'local' %}{% include googleads.html %}{% endif %}
+  </div>
+  <div id="header-line"></div>
+</header>
+</div>

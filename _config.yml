@@ -1,0 +1,43 @@
+# ### Site settings ###
+
+# used in layouts and header
+url: "http://www.conemu.ru"
+
+# used with breadcrumbs and socials
+site_name: "www.conemu.ru"
+
+# main mirror location
+mirror: "http://conemu.github.io"
+mirror_en: "http://conemu.github.io"
+mirror_ru: "http://www.conemu.ru"
+# used with conjunction with
+# page.docfolder: "/en"
+# sort of: href="{{ site.mirror }}{{ page.docfolder }}/VersionComparison.html"
+
+
+# ### Build settings ###
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Allow redirections
+gems:
+  - jekyll-redirect-from
+
+
+# ### Page defaults ###
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "root"
+      title: "ConEmu - эмулятор терминала Windows"
+      site_label: "Windows terminal"
+      docfolder: /ru
+      pagelang: ru
