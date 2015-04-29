@@ -38,6 +38,6 @@ defaults:
     values:
       layout: "root"
       title: "ConEmu - эмулятор терминала Windows"
-      site_label: "Windows terminal"
+      site_label: "терминал Windows"
       docfolder: /ru
       pagelang: ru
