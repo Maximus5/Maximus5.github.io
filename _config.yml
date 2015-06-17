@@ -3,8 +3,10 @@
 # used in layouts and header
 url: "http://www.conemu.ru"
 
-# used with breadcrumbs and socials
+# used with breadcrumbs
 site_name: "www.conemu.ru"
+# used with socials
+twit_text: "ConEmu%3A%20Удобный%20терминал%20для%20Windows"
 
 # main mirror location
 mirror: "http://conemu.github.io"
@@ -36,8 +38,11 @@ defaults:
       path: ""
       type: "pages"
     values:
+      isroot: true
       layout: "root"
       title: "ConEmu - эмулятор терминала Windows"
       site_label: "терминал Windows"
       docfolder: /ru
       pagelang: ru
+      toctitle: "Назад к оглавлению"
+      suggedit: "Предложить правку"
