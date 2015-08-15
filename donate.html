@@ -15,9 +15,11 @@ otherlang:
 
 <h1>Поддержите разработку ConEmu</h1>
 
-<h2><a href="https://money.yandex.ru">Yandex.Money</a></h2>
+<h2 id="yandex"><a href="https://money.yandex.ru">Yandex.Money</a></h2>
 <div class="text stext">
-Кошелек: <strong>4100 1198 3971 991</strong><br>
+Кошелек:
+<strong>4100 1198 3971 991</strong>,
+валюта Российский Рубль.
 </div>
 <div class="text stext">
 Этот метод работает только для России, Азербайджана, Армении, Беларуси, Казахстана, Киргизии, Таджикистана, Туркменистана, Узбекистана, Украины.<br>
@@ -35,19 +37,19 @@ otherlang:
  <input type="hidden" name="need-email" value="false" >
  <input type="hidden" name="need-phone" value="false">
  <input type="hidden" name="need-address" value="false">
-<table border="0" width="100%">
-<tr><td class="text Yinfo">Сумма (руб):</td>
-<td><input type="number" name="sum" value="" data-type="number" ></td></tr>
-<tr><td class="text Yinfo">Комментарий (опционально):</td>
-<td><input type="text" name="comment" value="" ></td></tr>
-<tr><td colspan="2" align="center" class="text Yinfo">
+<div class="donate-Ylabel">Сумма (руб):</div>
+<div class="donate-Yfield"><input type="number" name="sum" value="" data-type="number" ></div>
+<div class="donate-Ylabel">Комментарий (опционально):</div>
+<div class="donate-Yfield"><input type="text" name="comment" value="" ></div>
+<div class="donate-Yradio1">
  <input type="radio" name="paymentType" value="AC" checked>Visa/MasterCard</input>
+</div>
+<div class="donate-Yradio2">
  <input type="radio" name="paymentType" value="PC">Yandex.Money</input>
-</td></tr>
-<tr><td colspan="2" align="center">
+</div>
+<div class="donate-Ybutton">
  <input type="submit" name="submit-button" value="Поддержать">
-</td></tr>
-</table>
+</div>
 </form>
 </div>
 </div>
