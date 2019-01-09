@@ -49,6 +49,7 @@ Please read the rest of article about required profile modifications.
   * [bash and some other cygwin shells](#bash_and_other_cygwin_shells)
   * [zsh](#zsh)
   * [PowerShell](#PowerShell)
+    * [PowerShell with posh-git](#PowerShellPoshGit)
   * [Far Manager](#far)
 
 
@@ -152,9 +153,8 @@ fi
 For zsh just add this to your `~/.zshrc` file.
 
 ~~~
-prmptcmd() { eval "$PROMPT_COMMAND" }
-precmd_functions=(prmptcmd)
-PROMPT_COMMAND='ConEmuC -StoreCWD'
+set_conemu_cwd() { ConEmuC -StoreCWD }
+precmd_functions+=set_conemu_cwd
 ~~~
 
 
@@ -199,7 +199,28 @@ function prompt
 }
 ~~~
 
+#### PowerShell with posh-git {#PowerShellPoshGit}
+[posh-git](https://github.com/dahlbyk/posh-git) module modifies the PowerShell prompt when inside a Git directory. Since ConEmu only requires the ANSI sequences to be present, a sample `prompt` function can be the following:
 
+```powershell
+function prompt
+{
+  $loc = Get-Location
+
+  $prompt = & $GitPromptScriptBlock
+
+  if ($env:ConEmuANSI -eq "ON")
+  {
+    $prompt += "$([char]27)]9;12$([char]7)"
+    if ($loc.Provider.Name -eq "FileSystem")
+    {
+      $prompt += "$([char]27)]9;9;`"$($loc.Path)`"$([char]7)"
+    }
+  }
+
+  $prompt
+}
+```
 
 ### Far Manager  {#far}
 
