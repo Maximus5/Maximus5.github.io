@@ -1,19 +1,19 @@
 # ### Site settings ###
 
 # used in layouts and header
-url: "https://conemu.github.io"
+url: "https://conemu.ru"
 
 # used with breadcrumbs
-site_name: "conemu.github.io"
-site_lang: "en"
+site_name: "conemu.ru"
+site_lang: "ru"
 # used with socials
 twit_text: "ConEmu%3A%20Handy%20Windows%20terminal"
 
 # main mirror location
-mirror: "" # leave it empty for main site
+mirror: "https://conemu.github.io"
 mirror_en: "https://conemu.github.io"
 # site ssl certificate todo
-mirror_ru: "http://www.conemu.ru"
+mirror_ru: "https://conemu.ru"
 # mirror: "https://conemu.github.io"
 # used with conjunction with
 # page.docfolder: "/en"
