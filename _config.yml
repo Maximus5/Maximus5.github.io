@@ -1,0 +1,24 @@
+# ### Build settings ###
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: false
+
+# Allow redirections
+plugins:
+  - jekyll-redirect-from
+
+# ### Page defaults ###
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      isroot: true
+      layout: "root"
+      pagelang: en
