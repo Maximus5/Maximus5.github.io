@@ -1,3 +1,26 @@
+# ### Site settings ###
+
+# used in layouts and header
+url: "https://conemu.ru"
+
+# used with breadcrumbs
+site_name: "conemu.ru"
+site_lang: "ru"
+# used with socials
+twit_text: "ConEmu%3A%20Handy%20Windows%20terminal"
+
+# main mirror location
+mirror: "https://conemu.github.io"
+mirror_en: "https://conemu.github.io"
+# site ssl certificate todo
+mirror_ru: "https://conemu.ru"
+# mirror: "https://conemu.github.io"
+# used with conjunction with
+# page.docfolder: "/en"
+# sort of: href="{{ site.mirror }}{{ page.docfolder }}/VersionComparison.html"
+fosshub: "https://www.fosshub.com/ConEmu.html"
+
+
 # ### Build settings ###
 
 markdown: kramdown
@@ -10,6 +33,14 @@ kramdown:
 # Allow redirections
 plugins:
   - jekyll-redirect-from
+  - jekyll-paginate
+
+
+# How many news (builds) show per page
+paginate: 10
+paginate_path: "/blog/page:num/"
+#excerpt_separator: "\n---\n"
+excerpt_separator: ""
 
 # ### Page defaults ###
 
@@ -21,4 +52,48 @@ defaults:
     values:
       isroot: true
       layout: "root"
+      title: "ConEmu - default pagetitle"
+      site_label: "Windows Terminal"
+      docfolder: /en
       pagelang: en
+      toctitle: "Back to the table of contents"
+      suggedit: "Suggest better edit"
+  -
+    scope:
+      path: "en"
+      type: "pages"
+    values:
+      isroot: false
+      layout: "root"
+      title: "ConEmu - default pagetitle"
+      site_label: "Windows Terminal"
+      docfolder: /en
+      pagelang: en
+      toctitle: "Back to the table of contents"
+      suggedit: "Suggest better edit"
+  -
+    scope:
+      path: "ru"
+      type: "pages"
+    values:
+      isroot: false
+      layout: "root"
+      title: "ConEmu - default pagetitle"
+      site_label: "Windows Terminal"
+      docfolder: /ru
+      pagelang: ru
+      toctitle: "Назад к оглавлению"
+      suggedit: "Предложить правку"
+  -
+    scope:
+      type: "posts"
+    values:
+      category: "blog"
+      isroot: false
+      layout: "root"
+      title: "ConEmu News"
+      site_label: "Windows Terminal"
+      docfolder: /en
+      pagelang: en
+      toctitle: "Back to the table of contents"
+      suggedit: "Suggest better edit"
